@@ -30,8 +30,8 @@ WEATHER_CODES = {
 }
 
 def fetch_historical_weather():
-    start_date = "2026-03-01"
-    end_date   = "2026-03-07"
+    start_date = "2025-09-01"   # 6 months of historical data
+    end_date   = "2026-03-11"   # yesterday (archive API needs 1 day buffer)
     all_data   = []
 
     print(f"📅 Fetching data: {start_date} to {end_date}\n")

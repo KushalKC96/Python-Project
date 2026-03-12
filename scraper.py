@@ -31,11 +31,15 @@ def scrape_nepal_weather():
             temp_value = None
 
         scraped_data.append({
-            "city":        city_name,
-            "date":        datetime.today().strftime("%Y-%m-%d"),
-            "temperature": temp_value,
-            "condition":   condition_clean,
-            "source":      "BeautifulSoup"
+            "city":             city_name,
+            "date":             datetime.today().strftime("%Y-%m-%d"),
+            "temp_max_c":       None,   # not available from scraper
+            "temp_min_c":       None,   # not available from scraper
+            "temperature":      temp_value,
+            "precipitation_mm": None,   # not available from scraper
+            "wind_speed_max":   None,   # not available from scraper
+            "condition":        condition_clean,
+            "source":           "BeautifulSoup"
         })
 
     df = pd.DataFrame(scraped_data)
