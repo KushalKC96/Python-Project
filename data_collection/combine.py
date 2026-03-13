@@ -1,6 +1,6 @@
 import pandas as pd
-from scraper import scrape_nepal_weather
-from api_fetch import fetch_historical_weather
+from data_collection.scraper import scrape_nepal_weather
+from data_collection.api_fetch import fetch_historical_weather
 
 # Consistent column order across both sources
 COLUMNS = [
